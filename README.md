@@ -1,3 +1,5 @@
+## NAME:- V.B.LAKSHA
+## Reg.no:- 212224220051
 # Experiment-5
 ## AIM:Write a python program for Binary Search and inspect for failures. 
 
@@ -11,7 +13,33 @@ Start the program.
  7. Stop the program. 
 
  # PROGRAM
+ ```
+def binary_search(arr,target):
+  low,high=0,len(arr)-1
+
+  while low<=high:
+      mid=(low+high)//2
+      if arr[mid]==target:
+          return mid
+      elif arr[mid]<target:
+          low=mid+1
+      else:
+          high=mid-1
+  return -1
+
+arr=[2,8,54,48,85,96]
+target=int(input("Enter the number to search :"))
+result=binary_search(arr,target)
+
+if result != -1:
+  print(f"{target} found at index {result}")
+else:
+  print(f"{target} not found in the list")
+```
 
  # OUTPUT
+ <img width="335" height="71" alt="image" src="https://github.com/user-attachments/assets/87fc21fe-8c59-4ede-8a0c-622ff25a1086" />
+
 
  # RESULT
+ Thus, the python program of binary search is implemented and the output is verified successfully.
